@@ -11,7 +11,7 @@ function resolvePath(...segments: string[]) {
 const config: BuildOptions = {
   outdir: resolvePath("build"),
   entryPoints: [resolvePath("src", "index.jsx")],
-  entryNames: "bundle",
+  entryNames: "[dir]/bundle.[name]-[hash]",
   bundle: true,
   minify: !isDev,
   sourcemap: !isDev,
