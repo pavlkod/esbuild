@@ -16,5 +16,9 @@ const config: BuildOptions = {
   minify: !isDev,
   sourcemap: !isDev,
   tsconfig: resolvePath("tsconfig.json"),
+  loader: {
+    ".png": "file",
+    ".svg": "file",
+  },
 };
 export default config;
