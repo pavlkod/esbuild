@@ -1,8 +1,8 @@
-const ESBuild = require("esbuild");
-const path = require("path");
+import ESBuild from "esbuild";
+import path from "path";
 
-const config = require("./esbuild-config");
-const port = process.env.PORT || 3000;
+import config from "./esbuild-config";
+const port = Number(process.env.PORT) || 3000;
 
 (async () => {
   let ctx = await ESBuild.context({ ...config });
