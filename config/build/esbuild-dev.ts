@@ -13,3 +13,5 @@ const port = Number(process.env.PORT) || 3000;
   });
   console.log(`serve started on ${host} port ${port2}`);
 })();
+
+new EventSource("/esbuild").addEventListener("change", () => location.reload());
