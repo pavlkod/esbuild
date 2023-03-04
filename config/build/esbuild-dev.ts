@@ -1,5 +1,4 @@
 import ESBuild from "esbuild";
-import path from "path";
 
 import config from "./esbuild-config";
 const port = Number(process.env.PORT) || 3000;
@@ -13,5 +12,3 @@ const port = Number(process.env.PORT) || 3000;
   });
   console.log(`serve started on ${host} port ${port2}`);
 })();
-
-new EventSource("/esbuild").addEventListener("change", () => location.reload());
