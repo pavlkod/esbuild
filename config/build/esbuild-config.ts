@@ -23,5 +23,6 @@ const config: BuildOptions = {
     ".svg": "file",
   },
   plugins: [CleanPlugin, HTMLPlugin({ title: "Title" })],
+  metafile: true,
 };
 export default config;
