@@ -1,6 +1,7 @@
 import { BuildOptions } from "esbuild";
 import path from "path";
 import { CleanPlugin } from "./plugins/CleanPlugin";
+import { HTMLPlugin } from "./plugins/HTMLPlugin";
 
 const mode = process.env.MODE || "development";
 const isDev = mode === "development";
@@ -21,6 +22,6 @@ const config: BuildOptions = {
     ".png": "file",
     ".svg": "file",
   },
-  plugins: [CleanPlugin],
+  plugins: [CleanPlugin, HTMLPlugin({ title: "Title" })],
 };
 export default config;
